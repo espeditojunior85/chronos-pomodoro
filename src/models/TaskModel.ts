@@ -1,4 +1,4 @@
-import { TaskStateModel } from './TaskStateModel';
+import type { TaskStateModel as TaskStateModelType } from './TaskStateModel';
 
 export type TaskModel = {
   id: string;
@@ -7,5 +7,5 @@ export type TaskModel = {
   startDate: number;
   completeDate: number | null; // quando o timer chega ao finalAdd commentMore actions
   interruptDate: number | null; // quando a task for interrompida
-  type: keyof TaskStateModel['config'];
+  type: keyof TaskStateModelType['config'];
 };

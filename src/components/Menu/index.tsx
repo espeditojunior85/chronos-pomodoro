@@ -3,7 +3,6 @@ import {
   HouseIcon,
   SettingsIcon,
   SunIcon,
-  TimerIcon,
   MoonIcon,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
@@ -60,9 +59,9 @@ export function Menu() {
       <Link className={styles.menuLink} to='/'>
         <HouseIcon />
       </Link>
-      <a className={styles.menuLink} href='#'>
+      <Link className={styles.menuLink} to='/history'>
         <HistoryIcon />
-      </a>
+      </Link>
       <a className={styles.menuLink} href='#'>
         <SettingsIcon />
       </a>

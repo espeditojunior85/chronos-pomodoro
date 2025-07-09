@@ -3,11 +3,6 @@ import { getNextCycle } from '../../utils/getNextCycle';
 import { getNextCycleType } from '../../utils/getNextCycleType';
 import styles from './styles.module.css';
 
-type DefaultInputProps = {
-  id: string;
-  labelText: string;
-} & React.ComponentProps<'input'>;
-
 export function Cycles() {
   const { state } = useTaskContext();
   const cycleStep = Array.from({ length: state.currentCycle });
