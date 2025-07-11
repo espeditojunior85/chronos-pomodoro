@@ -4,6 +4,7 @@ import { Heading } from '../../components/Heading';
 import { MainTemplate } from '../../templates/MainTemplate';
 import { RouterLink } from '../../components/RouterLink';
 import { useEffect } from 'react';
+import pomodoro from '../../../public/images/favicon/pomodoro.jpg';
 
 export function AboutPomodoro() {
   useEffect(() => {
@@ -23,7 +24,7 @@ export function AboutPomodoro() {
             garantir descansos para evitar o cansaço mental.
           </p>
 
-          <img src='https://placehold.co/1920x1080' alt='' />
+          <img src={pomodoro} alt='' />
 
           <h2>Como funciona o Pomodoro tradicional?</h2>
           <ul>
