@@ -11,21 +11,24 @@ import { TaskActionTypes } from '../../contexts/TaskContext/taskActions';
 
 export function Settings() {
   const { state, dispatch } = useTaskContext();
+
   const workTimeInput = useRef<HTMLInputElement>(null);
   const shortBreakTimeInput = useRef<HTMLInputElement>(null);
   const longBreakTimeInput = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    document.title = 'Configurações - Chronos Pomodoro';
+  }, []);
 
   function handleSaveSettings(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     showMessage.dismiss();
 
     const formErrors = [];
+
     const workTime = Number(workTimeInput.current?.value);
     const shortBreakTime = Number(shortBreakTimeInput.current?.value);
     const longBreakTime = Number(longBreakTimeInput.current?.value);
-    useEffect(() => {
-      document.title = 'Configurações - Chronos Pomodoro';
-    }, []);
 
     if (isNaN(workTime) || isNaN(shortBreakTime) || isNaN(longBreakTime)) {
       formErrors.push('Digite apenas números para TODOS os campos');
