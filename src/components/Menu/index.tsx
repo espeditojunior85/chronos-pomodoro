@@ -62,9 +62,9 @@ export function Menu() {
       <Link className={styles.menuLink} to='/history'>
         <HistoryIcon />
       </Link>
-      <a className={styles.menuLink} href='#'>
+      <Link className={styles.menuLink} to='/settings'>
         <SettingsIcon />
-      </a>
+      </Link>
       <a
         className={styles.menuLink}
         href='#'
